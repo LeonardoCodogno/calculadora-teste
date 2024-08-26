@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <style>
+        .div {
+            width: 300px;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: solid 5px;
+            margin: 50px;
+            padding: 5%;
+        }
+
+        .button {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            max-width: 200px;
+            flex-wrap: wrap;
+        }
+
+        .zero {
+            max-width: 185px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            top: -60px;
+            right: 3px;
+
+        }
+
+        .display {
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 40px;
+
+
+        }
+
+        .number {
+            border: solid 3px;
+            border-radius: 5px;
+            height: 25px;
+            width: 230px;
+
+
+
+        }
+
+        .buttons2 {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            position: relative;
+            top: -150px;
+            left: 90px;
+        }
+
+        #equals {
+            position: relative;
+            left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <div class="display">
+            <input type="number" class="number">
+        </div>
+        <div class="buttons">
+
+            <button class="button" data-value="1">1</button>
+            <button class="button" data-value="2">2</button>
+            <button class="button" data-value="3">3</button>
+            <button class="button" data-value="4">4</button>
+            <button class="button" data-value="5">5</button>
+            <button class="button" data-value="6">6</button>
+            <button class="button" data-value="7">7</button>
+            <button class="button" data-value="8">8</button>
+            <button class="button" data-value="9">9</button>
+            <button class="button" id="clear">C</button>
+            <button class="button" id="equals">=</button>
+
+
+
+        </div>
+        <div class="zero">
+            <button class="button">0</button>
+        </div>
+        <div class="buttons2">
+            <button class="buttons2" data-value="+">+</button>
+            <button class="buttons2" data-value="-">-</button>
+            <button class="buttons2" data-value="/">/</button>
+            <button class="buttons2" data-value="*">*</button>
+        </div>
+
+    </div>
+    <script>
+        const display = document.getElementById('display')
+        const buttons = document.querySelectorAll('.button')
+
+        let currentInput = ''; // Entrada atual do usuário
+        let operator = '';    //Operador atual (+, -, *, /)
+        let firstNumber = '';  // Primeiro número digitado
+
+        function updateDisplay(value) { // função que funciona para atualizar o display.
+            display.value = value;
+
+        }
+        function handleButtonClick(event) {// função para processar o clique do botão
+            const buttonValue = event.target.getAttribute('data-value'); //event.target é o evento que o botão será clicado
+            // getAtribute(data-value) é para obter o valor do atributo especifico do html neste caso o valor do data-value
+            //const buttonValue cria uma constante chamada "" e atribui valor do atributo data-value
+        }
+
+    </script>
+</body>
+
+</html>
